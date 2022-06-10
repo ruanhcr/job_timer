@@ -23,7 +23,7 @@ class HomeState extends Equatable {
       : this._(
             projects: [],
             status: HomeStatus.initial,
-            projectFilter: ProjectStatus.em_andamento);
+            projectFilter: ProjectStatus.in_progress);
 
   @override
   List<Object?> get props => [projects, status, projectFilter];

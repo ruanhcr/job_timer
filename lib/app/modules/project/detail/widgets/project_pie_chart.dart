@@ -1,12 +1,20 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ProjectPieChart extends StatelessWidget {
-  const ProjectPieChart({Key? key}) : super(key: key);
+  ProjectPieChart(
+      {super.key, required this.projectEstimate, required this.totalTask});
+
+  int projectEstimate;
+  int totalTask;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+
+    final residual = (projectEstimate - totalTask);
+
     return SizedBox(
       width: 200,
       height: 200,
@@ -15,29 +23,25 @@ class ProjectPieChart extends StatelessWidget {
         children: [
           PieChart(PieChartData(sections: [
             PieChartSectionData(
-              value: 50,
+              value: totalTask.toDouble(),
               color: theme.primaryColor,
               showTitle: true,
-              title: '50h',
+              title: '${totalTask}h',
               titleStyle: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold
-              ),
+                  color: Colors.white, fontWeight: FontWeight.bold),
             ),
             PieChartSectionData(
-              value: 150,
-              color: theme.primaryColorLight,
-              showTitle: true,
-              title: '150h',
-              titleStyle: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold
-              )),
+                value: residual.toDouble(),
+                color: theme.primaryColorLight,
+                showTitle: true,
+                title: '${residual}h',
+                titleStyle: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold)),
           ])),
           Align(
             alignment: Alignment.center,
             child: Text(
-              '200h',
+              '${projectEstimate}h',
               style: TextStyle(
                 fontSize: 25,
                 color: theme.primaryColor,
