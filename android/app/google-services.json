@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "354186362099",
+    "project_id": "dart-week-job",
+    "storage_bucket": "dart-week-job.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354186362099:android:9051b0480628bb44168b86",
+        "android_client_info": {
+          "package_name": "com.ruru.dart_week"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354186362099-pabrb8ladrkb8kdtl28jdss2dnhtqtt1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMj6HJwJ3SCVpVqGGmK9IQjo9QmvpFV6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354186362099-pabrb8ladrkb8kdtl28jdss2dnhtqtt1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
